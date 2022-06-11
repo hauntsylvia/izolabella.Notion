@@ -27,8 +27,8 @@ namespace izolabella.Notion.Objects.Enums
         Date,
         [EnumMember(Value ="people")]
         People,
-        [EnumMember(Value ="files")]
-        Files,
+        [EnumMember(Value ="file")]
+        File,
         [EnumMember(Value ="checkbox")]
         Checkbox,
         [EnumMember(Value ="url")]

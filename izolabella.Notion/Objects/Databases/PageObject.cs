@@ -1,4 +1,5 @@
 ﻿using izolabella.Notion.Objects.Databases.Properties.Bases;
+using izolabella.Notion.Objects.Databases.Properties.Implementations;
 using izolabella.Notion.Objects.Enums;
 using izolabella.Notion.Objects.Users;
 using System;
@@ -17,13 +18,15 @@ namespace izolabella.Notion.Objects.Databases
                           DateTime LastEditedAt,
                           PartialNotionUser CreatedBy,
                           PartialNotionUser LastEditedBy,
-                          TProperties Properties) : base(Id, ObjectType)
+                          TProperties Properties,
+                          FileProperty? Cover) : base(Id, ObjectType)
         {
             this.CreatedAt = CreatedAt;
             this.LastEditedAt = LastEditedAt;
             this.CreatedBy = CreatedBy;
             this.LastEditedBy = LastEditedBy;
             this.Properties = Properties;
+            this.Cover = Cover;
         }
 
         /// <summary>
@@ -55,5 +58,8 @@ namespace izolabella.Notion.Objects.Databases
         /// </summary>
         [JsonProperty("properties")]
         public TProperties Properties { get; }
+
+        [JsonProperty("cover")]
+        public FileProperty? Cover { get; }
     }
 }
