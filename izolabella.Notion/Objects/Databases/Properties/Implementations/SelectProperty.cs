@@ -15,6 +15,7 @@ namespace izolabella.Notion.Objects.Databases.Properties.Implementations
             this.Selected = Selected;
         }
 
+        [JsonProperty("select")]
         public SelectContent Selected { get; }
     }
 }
