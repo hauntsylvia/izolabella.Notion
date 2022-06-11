@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "izolabella.Notion", "izolabella.Notion\izolabella.Notion.csproj", "{4E5221E6-8C96-43C0-BE37-3B9446EC9EBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "izolabella.Notion.Test", "izolabella.Notion.Test\izolabella.Notion.Test.csproj", "{10D97F8D-7BAE-4007-8AD6-C4B6E42F527C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E5221E6-8C96-43C0-BE37-3B9446EC9EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5221E6-8C96-43C0-BE37-3B9446EC9EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5221E6-8C96-43C0-BE37-3B9446EC9EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5221E6-8C96-43C0-BE37-3B9446EC9EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D97F8D-7BAE-4007-8AD6-C4B6E42F527C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D97F8D-7BAE-4007-8AD6-C4B6E42F527C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D97F8D-7BAE-4007-8AD6-C4B6E42F527C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D97F8D-7BAE-4007-8AD6-C4B6E42F527C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {254C0F9B-49D0-4CED-B0CC-BDE5F656455D}
+	EndGlobalSection
+EndGlobal
