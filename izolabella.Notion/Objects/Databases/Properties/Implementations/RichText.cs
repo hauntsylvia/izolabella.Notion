@@ -1,11 +1,6 @@
 ﻿using izolabella.Notion.Objects.Databases.Properties.Bases;
 using izolabella.Notion.Objects.Enums;
 using izolabella.Notion.Objects.Util.Converters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace izolabella.Notion.Objects.Databases.Properties.Implementations
 {
@@ -15,7 +10,7 @@ namespace izolabella.Notion.Objects.Databases.Properties.Implementations
     public class RichText : DatabaseObjectProperty
     {
         [JsonConstructor]
-        internal RichText(string Id, TextProperty[] RichTextContent, string Name,PropertyType PT) : base(Id, PT, Name)
+        internal RichText(string Id, TextProperty[] RichTextContent, string Name, PropertyType PT) : base(Id, PT, Name)
         {
             this.RichTextContent = RichTextContent;
         }

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace izolabella.Notion.Objects.Users
+﻿namespace izolabella.Notion.Objects.Users
 {
     public class NotionUser : NotionObject
     {
         [JsonConstructor]
-        public NotionUser(string Id, string? Name, Uri? AvatarUrl): base(Id, Enums.NotionObjectType.User)
+        public NotionUser(string Id, string? Name, Uri? AvatarUrl) : base(Id, Enums.NotionObjectType.User)
         {
             this.Name = Name;
             this.AvatarUrl = AvatarUrl;

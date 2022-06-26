@@ -2,12 +2,6 @@
 using izolabella.Notion.Objects.Results;
 using izolabella.Notion.Objects.Users;
 using izolabella.Notion.Objects.Util;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace izolabella.Notion.Objects.Databases
 {
@@ -103,9 +97,9 @@ namespace izolabella.Notion.Objects.Databases
         /// </summary>
         /// <param name="NumberOfPages">The number of pages to return.</param>
         /// <returns></returns>
-        public async Task<DatabasePageList<TProperties>> GetPages<TProperties>(int NumberOfPages = 100)
+        public async Task<DatabasePageList<TProperties>> GetPages(int NumberOfPages = 100)
         {
-            return (await NotionClient.GetResourceAsync<DatabasePageList<TProperties>>(this.MadeWith, await NotionClient.MakeRequestAsync(MadeWith, HttpMethod.Post, Urls.GetQueryDatabaseUrl(this.Id), 
+            return (await NotionClient.GetResourceAsync<DatabasePageList<TProperties>>(this.MadeWith, await NotionClient.MakeRequestAsync(MadeWith, HttpMethod.Post, Urls.GetQueryDatabaseUrl(this.Id),
                 new Dictionary<string, int>()
                 {
                     {"page_size", NumberOfPages }

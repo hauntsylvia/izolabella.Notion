@@ -1,10 +1,5 @@
 ﻿using Newtonsoft.Json.Converters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace izolabella.Notion.Objects.Enums
 {
@@ -13,43 +8,45 @@ namespace izolabella.Notion.Objects.Enums
     {
         [EnumMember(Value = "title")]
         Title,
-        [EnumMember(Value ="rich_text")]
+        [EnumMember(Value = "rich_text")]
         RichText,
-        [EnumMember(Value ="text")]
+        [EnumMember(Value = "text")]
         Text,
-        [EnumMember(Value ="number")]
+        [EnumMember(Value = "number")]
         Number,
-        [EnumMember(Value ="select")]
+        [EnumMember(Value = "select")]
         Select,
-        [EnumMember(Value ="multi_select")]
+        [EnumMember(Value = "multi_select")]
         MultiSelect,
-        [EnumMember(Value ="date")]
+        [EnumMember(Value = "date")]
         Date,
-        [EnumMember(Value ="people")]
+        [EnumMember(Value = "people")]
         People,
-        [EnumMember(Value ="file")]
+        [EnumMember(Value = "file")]
         File,
-        [EnumMember(Value ="checkbox")]
+        [EnumMember(Value = "checkbox")]
         Checkbox,
-        [EnumMember(Value ="url")]
+        [EnumMember(Value = "url")]
         Url,
-        [EnumMember(Value ="email")]
+        [EnumMember(Value = "email")]
         Email,
-        [EnumMember(Value ="phone_number")]
+        [EnumMember(Value = "phone_number")]
         PhoneNumber,
-        [EnumMember(Value ="formula")]
+        [EnumMember(Value = "formula")]
         Formula,
-        [EnumMember(Value ="relation")]
+        [EnumMember(Value = "relation")]
         Relation,
-        [EnumMember(Value ="rollup")]
+        [EnumMember(Value = "rollup")]
         Rollup,
-        [EnumMember(Value ="created_time")]
+        [EnumMember(Value = "created_time")]
         CreatedTime,
-        [EnumMember(Value ="created_by")]
+        [EnumMember(Value = "created_by")]
         CreatedBy,
-        [EnumMember(Value ="last_edited_time")]
+        [EnumMember(Value = "last_edited_time")]
         LastEditedTime,
-        [EnumMember(Value ="last_edited_by")]
-        LastEditedBy
+        [EnumMember(Value = "last_edited_by")]
+        LastEditedBy,
+        [EnumMember(Value = "external")]
+        External
     }
 }

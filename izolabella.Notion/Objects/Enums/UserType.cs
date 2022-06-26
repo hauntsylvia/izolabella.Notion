@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace izolabella.Notion.Objects.Enums
+﻿namespace izolabella.Notion.Objects.Enums
 {
     /// <summary>
     /// Enums for notion user types.

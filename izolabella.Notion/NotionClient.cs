@@ -1,12 +1,9 @@
-﻿global using Newtonsoft.Json;
+﻿global using izolabella.Notion.Objects.Databases.Content;
 global using izolabella.Notion.Objects.NotionBases;
-global using izolabella.Notion.Objects.Databases.Content;
-
-using izolabella.Notion.Objects.Enums;
+global using Newtonsoft.Json;
 using izolabella.Notion.Objects.Databases;
+using izolabella.Notion.Objects.Enums;
 using izolabella.Notion.Objects.Util;
-using Newtonsoft.Json.Linq;
-using izolabella.Notion.Objects.Databases.Properties.Bases;
 
 namespace izolabella.Notion
 {
@@ -54,17 +51,15 @@ namespace izolabella.Notion
             };
             HttpResponseMessage? HttpRequest = await Client.Client.SendAsync(ReqMessage);
             string Content = await (HttpRequest?.Content.ReadAsStringAsync() ?? Task.FromResult(""));
-            if (HttpRequest != null && HttpRequest.IsSuccessStatusCode)
-            {
-                return Content;
-            }
-            throw new HttpRequestException(inner: null, message: Content, statusCode: HttpRequest?.StatusCode);
+            return HttpRequest != null && HttpRequest.IsSuccessStatusCode
+                ? Content
+                : throw new HttpRequestException(inner: null, message: Content, statusCode: HttpRequest?.StatusCode);
         }
 
         internal static Task<T?> GetResourceAsync<T>(NotionClient Client, string Content) where T : NotionObject
         {
             T? S = JsonConvert.DeserializeObject<T>(Content);
-            if(S != null)
+            if (S != null)
             {
                 S.MadeWith = Client;
             }
@@ -74,9 +69,9 @@ namespace izolabella.Notion
         internal static Task<T?> GetResourcesAsync<T>(NotionClient Client, string Content) where T : IEnumerable<NotionObject>
         {
             T? S = JsonConvert.DeserializeObject<T>(Content);
-            if(S != null)
+            if (S != null)
             {
-                foreach(NotionObject O in S)
+                foreach (NotionObject O in S)
                 {
                     O.MadeWith = Client;
                 }
